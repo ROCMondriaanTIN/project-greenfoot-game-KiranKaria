@@ -8,9 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class RopeAttached extends Tile
 {
-     public boolean isSolid = false;
+    public boolean isSolid = false;
     private static int id;
-    public int _id;
+    public int _id;  
+    
     public RopeAttached(String image, int width, int heigth) {
         super(image, width, heigth);
         setImage(image);
@@ -20,5 +21,5 @@ public class RopeAttached extends Tile
         }
         _id = id;
         id++;
-    }
+    }   
 }

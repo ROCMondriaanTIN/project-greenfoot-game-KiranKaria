@@ -10,6 +10,7 @@ public class Hero extends Mover {
     private final double gravity;
     private final double acc;
     private final double drag;
+    public static int diamanten;
     private GreenfootImage run1 = new GreenfootImage("p1_walk01.png");
     private GreenfootImage run2 = new GreenfootImage("p1_walk02.png");
     private GreenfootImage run3 = new GreenfootImage("p1_walk03.png");
@@ -40,7 +41,7 @@ public class Hero extends Mover {
 
       
 
-    public Hero(int height,int width) {
+    public Hero() {
         super();
         gravity = 13.0;
         acc = 0.6;
@@ -73,23 +74,44 @@ public class Hero extends Mover {
                 break;
             }
         }
+        for (Actor enemy : getIntersectingObjects(RopeAttached.class)) {
+            if (enemy != null) {
+                if (Greenfoot.isKeyDown("space")) 
+                break;
+            }
+        }
+        
+        for(Actor diamand : getIntersectingObjects(Diamand.class)){
+            if(diamand != null)
+            {
+                World myWorld = getWorld();
+                getWorld().removeObject(diamand);
+                diamanten++;
+                MyWorld world = getWorldOfType(MyWorld.class);
+                if(world!= null) {
+                    world.getScoreboard().addDiamanten(); 
+                }
+            }
+        }
     }
 
     boolean onGround(){
         Actor under = getOneObjectAtOffset(0, getImage().getHeight()/2, Tile.class);
         return under != null;
     }
-        public void handleInput() {
-        if ((Greenfoot.isKeyDown("space")) && (onGround() == true)) {
+    public void handleInput()
+    {
+        if ((Greenfoot.isKeyDown("space")) && (onGround() == true)
+        || (Greenfoot.isKeyDown("up")) && (onGround() == true)
+        || (Greenfoot.isKeyDown("w")) && (onGround() == true)) {
             velocityY = -15;
             setImage("p1_walk05.png");
         }
-
-        else if (Greenfoot.isKeyDown("left")) {
+        if (Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("a")) {
             velocityX = -5;
             animatieLeft();
         }
-         if(Greenfoot.isKeyDown("right")) {
+         if(Greenfoot.isKeyDown("right") || Greenfoot.isKeyDown("d")) {
             velocityX = 5;
             animatieRight();
         }

@@ -10,7 +10,7 @@ public class RopeVertical extends Tile
 {
     public boolean isSolid = false;
     private static int id;
-    public int _id;
+    public int _id;  
     
     public RopeVertical(String image, int width, int heigth) {
         super(image, width, heigth);
@@ -21,5 +21,5 @@ public class RopeVertical extends Tile
         }
         _id = id;
         id++;
-    }
+    }   
 }

@@ -6,20 +6,24 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ScoreBoard extends Actor
+public class Scoreboard extends Actor
 {
-    int score = 0;
+    
+    private int aantalDiamanten = 0;
+    
+    
+    public void addDiamanten()
+    {
+       aantalDiamanten++; 
+       setImage(new GreenfootImage("X  " + aantalDiamanten, 30, Color.WHITE, new Color(0, 0, 0, 0)));
+    }
+    
     /**
-     * Act - do whatever the ScoreBoard wants to do. This method is called whenever
+     * Act - do whatever the Scoreboard wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-      setImage(new GreenfootImage("Score : " + score, 24, Color.BLACK, Color.GREEN));   
-    }  
-    
-    public void addScore()
-    {
-      score++;  
-}
+        // Add your action code here.
+    }    
 }
