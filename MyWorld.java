@@ -74,10 +74,10 @@ public class MyWorld extends World {
 
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 0, 0);
-        addObject(hero, 60, 60);
+        addObject(hero,300, 400);
         Diamand diamand = new Diamand();
-        addObject(diamand, 40, 70);
-        addObject(new Diamand(), 60, 60);
+        addObject(diamand, 2768, 1703);
+        addObject(new Diamand(),4546, 1913);
         addObject(new Diamant(), 29, 30);
         scoreboard = new Scoreboard();
         addObject(scoreboard, 69, 29);

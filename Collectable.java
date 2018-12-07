@@ -6,14 +6,8 @@ import java.util.ArrayList;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Collectable extends Mover
-{
-    /**
-     * Act - do whatever the Collectable wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        ArrayList<Diamand> myWorld = new ArrayList<Diamand>();
-    }    
+public class Collectable extends Mover{
+    public static ArrayList<Munt> goudenMunten = new ArrayList();
+    public static ArrayList<MuntZilver> zilverenMunten = new ArrayList();
+    public static ArrayList<Diamant> diamanten = new ArrayList();
 }

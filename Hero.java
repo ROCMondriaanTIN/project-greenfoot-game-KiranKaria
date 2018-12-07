@@ -11,6 +11,10 @@ public class Hero extends Mover {
     private final double acc;
     private final double drag;
     public static int diamanten;
+    protected static int munten;
+    protected static int muntWaarde;
+    public static int levens;
+    protected static int karakter;
     private GreenfootImage run1 = new GreenfootImage("p1_walk01.png");
     private GreenfootImage run2 = new GreenfootImage("p1_walk02.png");
     private GreenfootImage run3 = new GreenfootImage("p1_walk03.png");

@@ -6,8 +6,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class StartScherm extends World
-{
+
+    public class StartScherm extends World{
+        public static int hudLevens;
+        public static int hudMunten;
 
     /**
      * Constructor for objects of class StartScherm.
@@ -31,5 +33,7 @@ public class StartScherm extends World
         {
             Greenfoot.setWorld(new LevelSelect());
         }
-    }    
+    } 
 }
+
+
