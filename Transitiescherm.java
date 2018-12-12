@@ -38,15 +38,15 @@ public class Transitiescherm extends World
     }
     
     void voegMuntenToe(){
-        GoudenMunt gMunt1 = new GoudenMunt(450, 2054, 1);
+        Munt gMunt1 = new Munt(450, 2054, 1);
         Collectable.goudenMunten.add(gMunt1);
-        GoudenMunt gMunt2 = new GoudenMunt(500, 2054, 1);
+        Munt gMunt2 = new Munt(500, 2054, 1);
         Collectable.goudenMunten.add(gMunt2);
-        GoudenMunt gMunt3 = new GoudenMunt(500, 2054, 1);
+        Munt gMunt3 = new GoudenMunt(500, 2054, 1);
         Collectable.goudenMunten.add(gMunt3);
-        GoudenMunt gMunt4 = new GoudenMunt(500, 2054, 1);
+        Munt gMunt4 = new Munt(500, 2054, 1);
         Collectable.goudenMunten.add(gMunt4);
-        GoudenMunt gMunt5 = new GoudenMunt(500, 2054, 1);
+        Munt gMunt5 = new GoudenMunt(500, 2054, 1);
         Collectable.goudenMunten.add(gMunt5);
         GoudenMunt gMunt6 = new GoudenMunt(500, 2054, 1);
         Collectable.goudenMunten.add(gMunt6);
