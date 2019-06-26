@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Scoreboard extends Actor
+public class Scoreboard.java extends Actor
 {
     
     private int aantalDiamanten = 0;
